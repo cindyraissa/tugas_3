@@ -1,0 +1,4 @@
+<h2><%= @gambar.title %></h2>
+<%= link_to (image_tag @gambar.nama_gambar.url()), gambar_path(@gambar) %><br>
+<%= link_to "Edit", edit_gambar_path(@gambar) %> |
+<%= link_to "Delete", gambar_path(@gambar), :method => :delete, :data => {confirm: "Are you sure want to delete this file?"} %>

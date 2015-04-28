@@ -1,6 +1,12 @@
-<h1>Tugas 4</h1>
-<table>
-<tr>
-<td><img src = "kupukupu.jpg"></td>
-</tr>
-</table>
+<h1>Welcome</h1>
+
+<div class="row">
+  <% @gambars.each do |gambar| %>
+    <div class="col-lg-3">
+      <%= link_to (image_tag gambar.nama_gambar.url(:medium)), gambar_path(gambar) %><br>
+      <b><%= gambar.title %></b><br>
+      <%= link_to "Edit", edit_gambar_path(gambar) %> |
+      <%= link_to "Delete", gambar_path(gambar), :method => :delete, :data => {confirm: "Are you sure want to delete this file?"} %>
+    </div>
+  <% end %>
+</div>

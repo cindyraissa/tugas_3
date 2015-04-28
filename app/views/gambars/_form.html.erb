@@ -1,0 +1,24 @@
+
+<% if @gambar.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+      <% @gambar.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @gambar do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :nama_gambar %>
+    <%= f.file_field :nama_gambar, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Submit", :class => "btn btn-primary" %>
+  </div>
+<% end %>
