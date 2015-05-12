@@ -29,3 +29,15 @@
 	background-color:#009999;
 	height: 20px;
 }
+
+.link1{
+	text-decoration:none;
+	color:#66C2C2;
+}
+
+.link1:hover{
+	background-color:#009999;
+	color:white;
+}
+
+

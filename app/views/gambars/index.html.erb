@@ -1,12 +1,12 @@
 <h1>Welcome</h1>
-
+<link href = "aplication.css" rel = "stylesheet" type = "text/css"/>
 <div class="row">
   <% @gambars.each do |gambar| %>
     <div class="col-lg-3">
-      <%= link_to (image_tag gambar.nama_gambar.url(:medium)), gambar_path(gambar) %><br>
+      <%= link_to (image_tag gambar.nama_gambar.url(:thumb)), gambar_path(gambar) %><br>
       <b><%= gambar.title %></b><br>
-      <%= link_to "Edit", edit_gambar_path(gambar) %> |
-      <%= link_to "Delete", gambar_path(gambar), :method => :delete, :data => {confirm: "Are you sure want to delete this file?"} %>
+      <%= link_to "Edit", edit_gambar_path(gambar), :class =>"link1" %> |
+      <%= link_to "Delete", gambar_path(gambar), :class =>"link1" ,:method => :delete, :data => {confirm: "Are you sure want to delete this file?"} %>
     </div>
   <% end %>
 </div>
